@@ -1,3 +1,5 @@
-FROM nginx:alpine
+FROM nginx
+MAINTAINER Barnabas Makonda [github:MAKOSCAFEE]
 
-RUN apk add --no-cache curl
+# Install curl
+RUN apt-get update && apt-get install -y curl && apt-get clean
